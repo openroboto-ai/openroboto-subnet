@@ -1,12 +1,12 @@
 # OpenRoboto Miner and Protocol
 
-> **New: the `openroboto` CLI and the real-robot track.** Miner tooling is moving to the
-> packaged CLI — `pip install openroboto` ([PyPI](https://pypi.org/project/openroboto/) ·
-> [source](https://github.com/openroboto-ai/openroboto-cli)). Submissions to the
-> **real-robot track (xArm 6)** are made exclusively through the CLI, which resolves the
-> season, runs free local pre-checks, pays the entry fee, and announces on chain in one
-> command. Simulation-track submissions via this repository's `rt.py` continue to work
-> during the transition; new setups should start from the CLI. Rules and season status:
+> **New: the real-robot track (xArm 6).** Submissions to the real-robot track are made
+> through the packaged `openroboto` CLI — `pip install openroboto`
+> ([PyPI](https://pypi.org/project/openroboto/) ·
+> [source](https://github.com/openroboto-ai/openroboto-cli)) — which resolves the season,
+> runs free local pre-checks, pays the entry fee, and announces on chain in one command.
+> **The simulation track is unchanged**: everything documented in this repository,
+> including `rt.py` submission, keeps working exactly as before. Rules and season status:
 > [openroboto.ai/#/real](https://www.openroboto.ai/#/real) ·
 > [docs](https://www.openroboto.ai/#/docs).
 
