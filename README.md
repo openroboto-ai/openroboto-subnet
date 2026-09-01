@@ -1,13 +1,16 @@
 # OpenRoboto Miner and Protocol
 
-> **New: the real-robot track (xArm 6).** Submissions to the real-robot track are made
-> through the packaged `openroboto` CLI — `pip install openroboto`
+> **Season change (2026-09-01): the simulation track now runs LingBot-VLA 2.0**
+> (competition 2). The π0.5 simulation season is archived — its final board stays
+> on the site. All submissions, both tracks, go through the packaged `openroboto`
+> CLI, **1.1.0 or newer** — `pip install -U openroboto`
 > ([PyPI](https://pypi.org/project/openroboto/) ·
-> [source](https://github.com/openroboto-ai/openroboto-cli)) — which resolves the season,
-> runs free local pre-checks, pays the entry fee, and announces on chain in one command.
-> **The simulation track is unchanged**: everything documented in this repository,
-> including `rt.py` submission, keeps working exactly as before. Rules and season status:
-> [openroboto.ai/#/real](https://www.openroboto.ai/#/real) ·
+> [source](https://github.com/openroboto-ai/openroboto-cli) ·
+> [LingBot miner guide](https://github.com/openroboto-ai/openroboto-cli/blob/main/docs/MINER_LINGBOT.md)).
+> The legacy `rt.py` flow in this repository predates the season vocabulary and is
+> **deprecated for the new season** — it can burn a fee on a submission the season
+> will refuse. This repository remains the season-1 (π0.5) protocol record.
+> Rules and season status: [openroboto.ai/#/benchmark](https://www.openroboto.ai/#/benchmark) ·
 > [docs](https://www.openroboto.ai/#/docs).
 
 OpenRoboto is a Bittensor mainnet subnet for improving vision-language-action models. This repository contains the public miner, on-chain protocol helpers, weight-setting validator, training runner, configuration examples, and reproducibility documentation for netuid 80.
@@ -26,6 +29,10 @@ The following components are public:
 Held-out task data, the scoring service deployment, and subnet-owner operational tools are outside this repository. Seed derivation remains public because the future block hash and drand value do not exist when a miner submits a model.
 
 ## Miner flow
+
+*(Season-1 / π0.5 record. For the live LingBot-VLA 2.0 season, follow the
+[CLI LingBot guide](https://github.com/openroboto-ai/openroboto-cli/blob/main/docs/MINER_LINGBOT.md)
+instead.)*
 
 1. Read the current public `control.json`.
 2. Download the public training resources and base checkpoint.

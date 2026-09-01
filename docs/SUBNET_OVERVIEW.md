@@ -2,6 +2,14 @@
 
 **Bittensor subnet for open robot-learning models. Mainnet netuid 80.**
 
+> **Season note (2026-09-01).** The simulation track now runs
+> **LingBot-VLA 2.0** (competition 2, base model
+> `openroboto-ai/lingbot-vla-v2-6b-libero`); the π0.5 simulation season is
+> archived. The π0.5 walkthroughs below stand as the season-1 record — the
+> protocol mechanics (fees, seeds, ranking, weights) are unchanged. The current
+> miner path is the [`openroboto` CLI ≥ 1.1.0](https://github.com/openroboto-ai/openroboto-cli)
+> and its [LingBot miner guide](https://github.com/openroboto-ai/openroboto-cli/blob/main/docs/MINER_LINGBOT.md).
+
 This document explains how the subnet works, end to end: what miners submit, what it costs, how evaluation is randomized and executed, how ranking and on-chain weights are derived, and what keeps the loop honest. Nothing here needs to be taken on trust — each mechanism leaves a public trace you can check yourself: a chain transaction, an API response, a Hugging Face commit, a drand beacon round.
 
 ---
@@ -151,7 +159,7 @@ The worker can also report progress via `PATCH /api/v1/benchmark/task/{id}/statu
 The subnet does not rank by raw score alone; it uses a challenge system designed to reward beating the incumbent, not tying it:
 
 1. Scored miners are ordered by earliest scoring time; the first becomes the initial **champion** (Rank 1).
-2. Each subsequent miner **challenges the current champion**: the challenger's average score must exceed the champion's by at least **`champion_margin` (default 0.01)**.
+2. Each subsequent miner **challenges the current champion**: the challenge succeeds only if `challenger_score > champion_score + champion_margin` (default **0.01**) — **strictly greater**. A lead of exactly the margin is a failed challenge; ties lose on purpose, so resubmitting the champion's own weights can never take the crown.
 3. If the challenge succeeds, the challenger becomes the new champion, the old champion drops to Rank 2, and the rest shift down.
 4. If it fails, the challenger **does not appear on the board at all**.
 5. The board is capped at **Top 3**, with emission weights **70 / 20 / 10**.
