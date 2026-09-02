@@ -14,7 +14,8 @@
 > [docs](https://www.openroboto.ai/#/docs).
 >
 > **Real-robot track (xArm 6).** Its 20% share of emissions accrues to a dedicated
-> prize-pool hotkey and is settled once per season (95% to the champion over 120 days,
+> prize-pool hotkey (UID 2, `5HVjAxFQ36vsNPcAWP5LBefutCtw8ishCCQj6VRfsDvERAZo`) and is
+> settled once per season (95% to the champion over 120 days,
 > 5% to qualified entries over 30 days). Every scored trial is published on complete
 > video; a rewarded model must stay public for its whole payout period, and during that
 > time **anyone can challenge it** by opening an issue in this repository — an upheld

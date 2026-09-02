@@ -176,7 +176,8 @@ btcli subnet metagraph --netuid 80 --network finney
 
 Validator weight is how the **simulation** track pays its champion. The **real-robot**
 track (xArm 6) is paid differently: its 20% share of emissions accrues to a dedicated
-prize-pool hotkey and is settled once per season — 95% to the single champion vested
+prize-pool hotkey (UID 2, `5HVjAxFQ36vsNPcAWP5LBefutCtw8ishCCQj6VRfsDvERAZo`, visible in
+the metagraph command above) and is settled once per season — 95% to the single champion vested
 over 120 days, 5% to every entry that clears the qualification bar vested over 30 days,
 anything the rules withhold burned and recorded publicly. Every scored trial is
 published on complete video with its record. A rewarded model must stay public for its
