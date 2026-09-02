@@ -12,6 +12,14 @@
 > will refuse. This repository remains the season-1 (π0.5) protocol record.
 > Rules and season status: [openroboto.ai/#/benchmark](https://www.openroboto.ai/#/benchmark) ·
 > [docs](https://www.openroboto.ai/#/docs).
+>
+> **Real-robot track (xArm 6).** Its 20% share of emissions accrues to a dedicated
+> prize-pool hotkey and is settled once per season (95% to the champion over 120 days,
+> 5% to qualified entries over 30 days). Every scored trial is published on complete
+> video; a rewarded model must stay public for its whole payout period, and during that
+> time **anyone can challenge it** by opening an issue in this repository — an upheld
+> challenge burns whatever has not been paid. Full rules:
+> [REAL_TRACK.md](https://github.com/openroboto-ai/openroboto-cli/blob/main/docs/REAL_TRACK.md).
 
 OpenRoboto is a Bittensor mainnet subnet for improving vision-language-action models. This repository contains the public miner, on-chain protocol helpers, weight-setting validator, training runner, configuration examples, and reproducibility documentation for netuid 80.
 

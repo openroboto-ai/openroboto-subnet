@@ -174,6 +174,17 @@ The backend resolves the ranking and exposes it via the API. A lightweight valid
 btcli subnet metagraph --netuid 80 --network finney
 ```
 
+Validator weight is how the **simulation** track pays its champion. The **real-robot**
+track (xArm 6) is paid differently: its 20% share of emissions accrues to a dedicated
+prize-pool hotkey and is settled once per season — 95% to the single champion vested
+over 120 days, 5% to every entry that clears the qualification bar vested over 30 days,
+anything the rules withhold burned and recorded publicly. Every scored trial is
+published on complete video with its record. A rewarded model must stay public for its
+whole payout period, and anyone may challenge it for cheating during that time by
+opening an issue on this repository; an upheld challenge burns whatever has not yet
+been paid. The full ruleset lives in
+[REAL_TRACK.md](https://github.com/openroboto-ai/openroboto-cli/blob/main/docs/REAL_TRACK.md).
+
 ## 9. Anti-gaming summary
 
 | Attack | Countermeasure |
