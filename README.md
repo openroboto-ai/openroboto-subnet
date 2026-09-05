@@ -13,7 +13,11 @@
 > Rules and season status: [openroboto.ai/#/benchmark](https://www.openroboto.ai/#/benchmark) ·
 > [docs](https://www.openroboto.ai/#/docs).
 >
-> **Real-robot track (xArm 6).** Its 20% share of emissions accrues to a dedicated
+> **Real-robot track (xArm 6).** The baseline task is to grasp one green block
+> (35 mm high, 33 mm wide) and
+> lift it clear of the tabletop; no placement into a basket or plate is required.
+> Each season's published, locked task specification remains authoritative.
+> Its 20% share of emissions accrues to a dedicated
 > prize-pool hotkey (UID 2, `5HVjAxFQ36vsNPcAWP5LBefutCtw8ishCCQj6VRfsDvERAZo`) and is
 > settled once per season (95% to the champion over 120 days,
 > 5% to qualified entries over 30 days). Every scored trial is published on complete
@@ -138,4 +142,3 @@ The exact formula, drand chain identifier, verification steps, and security assu
 | `docs/` | Miner, validator, protocol, API, and reproducibility documentation |
 
 Local configuration, runtime state, logs, databases, environments, and model weights are excluded by `.gitignore`.
-
