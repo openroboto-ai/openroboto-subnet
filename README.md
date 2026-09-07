@@ -30,6 +30,11 @@ OpenRoboto is a Bittensor mainnet subnet for improving vision-language-action mo
 
 [Protocol overview](docs/SUBNET_OVERVIEW.md) · [Seed derivation](docs/SEED_GENERATION.md) · [Evaluation toolkit](https://github.com/openroboto-ai/openroboto-evaluation)
 
+Parallel real-robot documentation is in preparation: [overview and links](docs/REAL_ROBOT.md).
+π0.5 and LingBot-VLA 2.0 are intended to run as separate physical competitions.
+This draft does not amend the existing season's reward terms quoted above or
+announce a new competition as open.
+
 ## Public trust boundary
 
 The following components are public:
