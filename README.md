@@ -17,10 +17,10 @@
 > (35 mm high, 33 mm wide) and
 > lift it clear of the tabletop; no placement into a basket or plate is required.
 > Each season's published, locked task specification remains authoritative.
-> Its 20% share of emissions accrues to a dedicated
-> prize-pool hotkey (UID 2, `5HVjAxFQ36vsNPcAWP5LBefutCtw8ishCCQj6VRfsDvERAZo`) and is
-> settled once per season (95% to the champion over 120 days,
-> 5% to qualified entries over 30 days). Every scored trial is published on complete
+> Current emission allocation across tracks is **15% simulation**, **42.5% real
+> π0.5**, and **42.5% real LingBot-VLA 2.0**. Each real track accounts for its own
+> seasonal pool, settled once per season (95% of that pool to the champion over
+> 120 days, 5% to qualified entries over 30 days). Every scored trial is published on complete
 > video; a rewarded model must stay public for its whole payout period, and during that
 > time **anyone can challenge it** by opening an issue in this repository — an upheld
 > challenge burns whatever has not been paid. Full rules:
@@ -32,9 +32,9 @@ OpenRoboto is a Bittensor mainnet subnet for improving vision-language-action mo
 
 Parallel real-robot documentation and the confirmed workstation interface:
 [overview and links](docs/REAL_ROBOT.md).
-π0.5 and LingBot-VLA 2.0 are intended to run as separate physical competitions.
-The interface publication does not amend the existing season's reward terms quoted above or
-announce a new competition as open.
+π0.5 and LingBot-VLA 2.0 run as separate physical competitions.
+Track-level allocation is separate from within-pool settlement percentages;
+previously accrued season rewards are not retroactively redistributed.
 
 ## Public trust boundary
 

@@ -162,7 +162,7 @@ The subnet does not rank by raw score alone; it uses a challenge system designed
 2. Each subsequent miner **challenges the current champion**: the challenge succeeds only if `challenger_score > champion_score + champion_margin` (default **0.01**) — **strictly greater**. A lead of exactly the margin is a failed challenge; ties lose on purpose, so resubmitting the champion's own weights can never take the crown.
 3. If the challenge succeeds, the challenger becomes the new champion, the old champion drops to Rank 2, and the rest shift down.
 4. If it fails, the challenger **does not appear on the board at all**.
-5. The board is capped at **Top 3**, with emission weights **70 / 20 / 10**.
+5. The simulation board is capped at **Top 3**, with relative weights **70 / 20 / 10** within the simulation track's **15%** emission allocation.
 
 Consequences worth noting: copying the current champion's weights cannot dethrone it (a copy ties, and a tie loses by margin); and a settled round's champion is **held** until someone clears the bar in a later round.
 
@@ -174,11 +174,12 @@ The backend resolves the ranking and exposes it via the API. A lightweight valid
 btcli subnet metagraph --netuid 80 --network finney
 ```
 
-Validator weight is how the **simulation** track pays its champion. The **real-robot**
-track (xArm 6) is paid differently: its 20% share of emissions accrues to a dedicated
-prize-pool hotkey (UID 2, `5HVjAxFQ36vsNPcAWP5LBefutCtw8ishCCQj6VRfsDvERAZo`, visible in
-the metagraph command above) and is settled once per season — 95% to the single champion vested
-over 120 days, 5% to every entry that clears the qualification bar vested over 30 days,
+Current emissions allocated across tracks are **15% simulation**, **42.5% real
+π0.5**, and **42.5% real LingBot-VLA 2.0**. Simulation ranking weights apply within
+its 15% share. Each real track accounts for its own seasonal pool; entry-fee
+recipients must not be treated as prize-pool identifiers. Each real track's pool
+is settled once per season — 95% of that pool to the single champion vested over
+120 days, 5% to entries that clear the qualification bar vested over 30 days,
 anything the rules withhold burned and recorded publicly. Every scored trial is
 published on complete video with its record. A rewarded model must stay public for its
 whole payout period, and anyone may challenge it for cheating during that time by
