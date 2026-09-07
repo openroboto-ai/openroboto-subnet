@@ -33,7 +33,7 @@ OpenRoboto is a Bittensor mainnet subnet for improving vision-language-action mo
 Parallel real-robot documentation and the confirmed workstation interface:
 [overview and links](docs/REAL_ROBOT.md).
 π0.5 and LingBot-VLA 2.0 are intended to run as separate physical competitions.
-The interface publication retains unresolved hardware TODOs and does not amend the existing season's reward terms quoted above or
+The interface publication does not amend the existing season's reward terms quoted above or
 announce a new competition as open.
 
 ## Public trust boundary
