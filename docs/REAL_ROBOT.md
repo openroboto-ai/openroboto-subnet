@@ -20,8 +20,14 @@ same inference-start state throughout a 50-step prediction; the default executed
 prefix is 25 steps. The CLI document specifies radians, normalization, camera
 preprocessing and safety behavior.
 
-Reference data and executable runtime tests are not supplied by this
-documentation update.
+## Camera-view reference
+
+![Workstation camera view showing the xArm6, gripper and tabletop work area](https://raw.githubusercontent.com/openroboto-ai/openroboto-cli/main/docs/images/real-track/workstation-camera-view.png)
+
+Original viewer capture supplied by the workstation team, before model
+preprocessing. The visible objects illustrate the scene and do not define an
+evaluation task. The viewer controls are not part of the model image input.
+See the [camera and preprocessing reference](https://github.com/openroboto-ai/openroboto-cli/blob/main/docs/WORKSTATION_DATA.md#camera-view-reference).
 
 Use the selected environment's published competition ID and terms. Do not use
 the deprecated `rt.py` flow in this repository to enter a new real competition.
