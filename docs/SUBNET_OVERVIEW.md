@@ -248,7 +248,7 @@ The owner publishes one JSON file over plain HTTPS that every miner polls (ETag-
 | Leaderboard | <https://www.openroboto.ai/#/benchmark> |
 | Public queue | <https://www.openroboto.ai/#/queue> |
 | API health | <https://api.openroboto.ai/health> |
-| Open Data Pool | <https://huggingface.co/buckets/openroboto-ai/datapool> |
+| Open Data Pool | <https://www.openroboto.ai/#/datapool> · [Training data guide](https://github.com/openroboto-ai/openroboto-cli/blob/main/docs/TRAINING_DATA.md) |
 | Base model (openpi π0.5) | <https://github.com/Physical-Intelligence/openpi> |
 | LIBERO benchmark | <https://github.com/Lifelong-Robot-Learning/LIBERO> |
 | drand beacon | <https://drand.love> |

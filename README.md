@@ -13,9 +13,11 @@
 > Rules and season status: [openroboto.ai/#/benchmark](https://www.openroboto.ai/#/benchmark) ·
 > [docs](https://www.openroboto.ai/#/docs).
 >
-> **Real-robot track (xArm 6).** The baseline task is to grasp one green block
-> (35 mm high, 33 mm wide) and
-> lift it clear of the tabletop; no placement into a basket or plate is required.
+> **Real-robot tracks (xArm 6).** π0.5 and LingBot-VLA 2.0 share
+> [seven evaluation tasks](https://github.com/openroboto-ai/openroboto-cli/blob/main/docs/REAL_TASKS.md),
+> with 10 trials per task and 70 trials per submitted model in its selected track.
+> The earlier single-green-block baseline is a historical reference, not an
+> additional task in this suite.
 > Each season's published, locked task specification remains authoritative.
 > Current emission allocation across tracks is **15% simulation**, **42.5% real
 > π0.5**, and **42.5% real LingBot-VLA 2.0**. Each real track accounts for its own
@@ -29,6 +31,9 @@
 OpenRoboto is a Bittensor mainnet subnet for improving vision-language-action models. This repository contains the public miner, on-chain protocol helpers, weight-setting validator, training runner, configuration examples, and reproducibility documentation for netuid 80.
 
 [Protocol overview](docs/SUBNET_OVERVIEW.md) · [Seed derivation](docs/SEED_GENERATION.md) · [Evaluation toolkit](https://github.com/openroboto-ai/openroboto-evaluation)
+
+Public training datasets: [Open Data Pool](https://www.openroboto.ai/#/datapool) ·
+[AXIS Franka format and downloads](https://github.com/openroboto-ai/openroboto-cli/blob/main/docs/TRAINING_DATA.md).
 
 Parallel real-robot documentation and the confirmed workstation interface:
 [overview and links](docs/REAL_ROBOT.md).
