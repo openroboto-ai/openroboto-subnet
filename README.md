@@ -19,8 +19,8 @@
 > The earlier single-green-block baseline is a historical reference, not an
 > additional task in this suite.
 > Each season's published, locked task specification remains authoritative.
-> Current emission allocation across tracks is **15% simulation**, **42.5% real
-> π0.5**, and **42.5% real LingBot-VLA 2.0**. Each real track accounts for its own
+> Current emission allocation across tracks is **15% simulation**, **25% real
+> π0.5**, **25% real LingBot-VLA 2.0**, and **35% egocentric data collection**. Each real track accounts for its own
 > seasonal pool, settled once per season (95% of that pool to the champion over
 > 120 days, 5% to qualified entries over 30 days). Every scored trial is published on complete
 > video; a rewarded model must stay public for its whole payout period, and during that

@@ -4,8 +4,8 @@
 > This is not a competition-opening notice.
 
 OpenRoboto runs parallel physical tracks for π0.5 and LingBot-VLA 2.0.
-Current emission allocation is 15% simulation, 42.5% real π0.5 and 42.5% real
-LingBot-VLA 2.0. See the [allocation overview](https://github.com/openroboto-ai/openroboto-cli/blob/main/docs/REAL_TRACKS.md#current-emission-allocation).
+Current emission allocation is 15% simulation, 25% real π0.5, 25% real
+LingBot-VLA 2.0 and 35% egocentric data collection. See the [allocation overview](SUBNET_OVERVIEW.md).
 Model-facing participation documentation belongs in the packaged CLI repository;
 this older subnet toolkit is not a second real-robot submission implementation.
 

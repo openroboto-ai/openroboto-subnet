@@ -110,7 +110,7 @@ Every submission is preceded by a small payment made by **burning TAO** — dest
 
 - **Why charge?** Each submission consumes real GPU hours (6 simulation suites per model). A per-submission fee makes flooding the queue economically irrational.
 - **Why burn instead of pay?** There is no recipient. The operator earns nothing from fees, which removes any incentive to farm submissions or sell evaluation slots.
-- **How much?** Published in `control.json` → `payment.burn_rate_tao`. Currently **0.1 TAO**. A rate of 0 opens a free period (burn verification is skipped entirely).
+- **How much?** The current simulation submission fee is **0.2 TAO**. The CLI confirms the selected season's fee against the backend before paying.
 - **Payment is bound to the submission.** The burn transaction hash (`b`) and block number (`bb`) are embedded in the commitment payload itself (see §11), so a submission cannot claim someone else's payment.
 
 The backend verifies each payment **against the chain, fail-closed**:
@@ -168,15 +168,26 @@ Consequences worth noting: copying the current champion's weights cannot dethron
 
 ## 8. Weights on chain
 
-The backend resolves the ranking and exposes it via the API. A lightweight validator reads it, normalizes to u16, and calls `set_weights` on netuid 80 — with strict success checking (the call's actual `is_success` flag is verified rather than assumed). Anyone can confirm the emitted weights:
+The backend exposes the final weights via the public API. Within-track normalization and track allocations are already incorporated into these weights. A lightweight validator reads them, converts to u16, and calls `set_weights` on netuid 80 — with strict success checking (the call's actual `is_success` flag is verified rather than assumed). Anyone can confirm the emitted weights:
 
 ```bash
 btcli subnet metagraph --netuid 80 --network finney
 ```
 
-Current emissions allocated across tracks are **15% simulation**, **42.5% real
-π0.5**, and **42.5% real LingBot-VLA 2.0**. Simulation ranking weights apply within
-its 15% share. Each real track accounts for its own seasonal pool; entry-fee
+Current emissions allocated across tracks are **15% simulation**, **25% real
+π0.5**, **25% real LingBot-VLA 2.0**, and **35% egocentric data collection**.
+The 70 / 20 / 10 simulation ranking weights apply within its 15% share.
+
+Within the egocentric allocation, emissions are split proportionally among miners
+based on their accepted data contributions during that week. Each miner's score
+is calculated by summing the following across their accepted submissions:
+
+`MinerScore = Σ(AcceptedMinutes × TaskRate × QualityScore × NoveltyScore)`
+
+Data-track settlement takes place weekly, with each week's weights based on the
+previous week's accepted contributions. Invalid data does not count toward rewards.
+
+Each real track accounts for its own seasonal pool; entry-fee
 recipients must not be treated as prize-pool identifiers. Each real track's pool
 is settled once per season — 95% of that pool to the single champion vested over
 120 days, 5% to entries that clear the qualification bar vested over 30 days,
